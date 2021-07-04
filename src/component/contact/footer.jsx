@@ -3,10 +3,14 @@ import React from "react";
 const Footer = () => {
   return (
     <React.Fragment>
-      <div>
-        <div>Shanice Dennis-Russell</div>
-        <div>Email </div>
-        <div>LinkIn </div>
+      <div className="footer-container">
+        <div>
+          <p>Shanice Dennis-Russell</p>
+        </div>
+        <div>
+          {" "}
+          <a>Email</a>{" "}
+        </div>
       </div>
     </React.Fragment>
   );

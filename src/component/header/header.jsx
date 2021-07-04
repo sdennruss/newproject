@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "./logo.png";
 
 const Header = () => {
@@ -8,15 +8,17 @@ const Header = () => {
     <React.Fragment>
       <div className="header-container">
         <div className="logo-container">
-          <img alt="logo" className="logo" src={logo} />
+          <Link to="/">
+            <img alt="logo" className="logo" src={logo} />
+          </Link>
         </div>
         <div className="navigation-container">
           <ul className="unlisted-nav">
             {navigation.map((item) => (
               <li key={item} className="listed-nav">
-                <Link className="nav" key={item} to={`/${item}`}>
+                <NavLink className="nav" key={item} to={`/${item}`}>
                   {item}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

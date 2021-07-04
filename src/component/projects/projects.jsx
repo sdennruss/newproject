@@ -7,9 +7,9 @@ const Projects = () => {
     <React.Fragment>
       <div className="outer-projects-container">
         <div className="inner-three-container">
-          <p className="three">All Projects</p>
-          <p className="three">All Projects</p>
-          <p className="three">All Projects</p>
+          <p className="three one">All Projects</p>
+          <p className="three two">All Projects</p>
+          <p className="three four">All Projects</p>
         </div>
         <div>
           {details.map((project) => (
@@ -37,7 +37,6 @@ const Projects = () => {
                   <Link className="p-button" to={`/projects/${project.path}`}>
                     Check it out
                   </Link>
-                  {console.log(project.title)}
                 </p>
               </div>
             </div>

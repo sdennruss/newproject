@@ -1,34 +1,38 @@
 import React from "react";
-import { details } from "./details";
 import TitlePage from "./titlePage";
+import { details } from "./details";
+import { Redirect, Route } from "react-router-dom";
 
 const Description = ({ index }) => {
+  const routeError = index < 0 ? 0 : index;
+  console.log(routeError);
   return (
     <React.Fragment>
-      <TitlePage index={index} details={details} />
+      <TitlePage index={routeError} details={details} />
 
       <div className="p-description-container">
-        <div className="project-image-container">
-          <img className="individual-page-img" src={details[index].mainImg} />
+        <div className="individial-img-container">
+          <img className="individual-img" src={details[routeError].mainImg} />
         </div>
 
         <div className="single-detail-container">
-          <div className="project-subtitle">
-            <h2>{details[index].title}</h2>
+          <div className="subtitle-container">
+            <h2 className="subtitle">{details[routeError].title}</h2>
           </div>
 
-          <div>
-            <p> {details[index].summary}</p>
+          <div className="more-info-container">
+            <p className="more-info"> {details[routeError].description}</p>
           </div>
 
-          <div>
-            <p
-              href={details[index].link}
+          <div className="visit-container">
+            <a
+              className="visit-web"
+              href={details[routeError].link}
               target="_blank"
               rel="noopener noreferrer"
             >
               Visit Web
-            </p>
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./component/header/header";
 import Projects from "./component/projects/projects";
 import Homepage from "./component/homepage/homepage";
@@ -15,10 +15,14 @@ function App() {
       <div className="routing-container">
         <Switch>
           <Route path="/home" component={Homepage} />
-          <Route path="/projects/:title" component={ProjectDetails} />
+          <Route
+            path="/projects/:path"
+            render={(props) => <ProjectDetails {...props} />}
+          />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={ContactDetails} />
-          <Route path="/" component={Homepage} />
+          <Route exact path="/" component={Homepage} />
+          <Redirect from="*" to="/home" />
         </Switch>
       </div>
       <Footer />
