@@ -4,8 +4,9 @@ const Footer = () => {
   return (
     <React.Fragment>
       <div className="footer-container">
-        <div>
-          <p>Shanice Dennis-Russell</p>
+        <div className="copy-right">
+          <i class="fa fa-copyright"> </i>
+          <p> 2021 Shanice Dennis-Russell</p>
         </div>
         <div>
           {" "}

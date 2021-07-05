@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import TitlePage from "./titlePage";
 import { details } from "./details";
-import { Redirect, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Description = ({ index }) => {
+  const [next, setNext] = useState(index + 1);
+
   const routeError = index < 0 ? 0 : index;
-  console.log(routeError);
+
+  const newPath = details[next].path;
+
+  const handleNextProject = (number) => {
+    number === 3 ? setNext(0) : setNext(number);
+    console.log("next:", next, "number", number, "index", index);
+  };
+
   return (
     <React.Fragment>
       <TitlePage index={routeError} details={details} />
@@ -21,18 +30,33 @@ const Description = ({ index }) => {
           </div>
 
           <div className="more-info-container">
-            <p className="more-info"> {details[routeError].description}</p>
+            <p className="more-info "> {details[routeError].description}</p>
+            <p className="more-info two">
+              {" "}
+              {details[routeError].subDescription}
+            </p>
           </div>
 
-          <div className="visit-container">
-            <a
-              className="visit-web"
-              href={details[routeError].link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Web
-            </a>
+          <div className="actions-container">
+            <div className="visit-container">
+              <a
+                className="visit-web"
+                href={details[routeError].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Web
+              </a>
+            </div>
+            <div className="arrow container">
+              <Link to={`/projects/${newPath}`} className="arrow-link">
+                <i
+                  onClick={() => handleNextProject(next + 1)}
+                  className="fa fa-angle-double-right"
+                ></i>
+              </Link>
+              <p>next project</p>
+            </div>
           </div>
         </div>
       </div>

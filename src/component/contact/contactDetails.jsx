@@ -6,7 +6,7 @@ const ContactDetails = () => {
     <React.Fragment>
       <div className="contact-container">
         <div className="contact-left">
-          <h1 className="contact-header">Let's Get The Ball Rollin'</h1>
+          <p className="contact-header">Let's Get The Ball Rollin'</p>
           <Blob />
         </div>
 

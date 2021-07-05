@@ -11,7 +11,7 @@ const Projects = () => {
           <p className="three two">All Projects</p>
           <p className="three four">All Projects</p>
         </div>
-        <div>
+        <div className="outer-p-container">
           {details.map((project) => (
             <div className="p-container" key={project.id}>
               <div className="p-image-container">
