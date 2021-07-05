@@ -4,14 +4,14 @@ import { details } from "./details";
 import { Link } from "react-router-dom";
 
 const Description = ({ index }) => {
-  const [next, setNext] = useState(index + 1);
+  const [next, setNext] = useState(0);
 
   const routeError = index < 0 ? 0 : index;
 
   const newPath = details[next].path;
 
   const handleNextProject = (number) => {
-    number === 3 ? setNext(0) : setNext(number);
+    number === 4 ? setNext(0) : setNext(number);
     console.log("next:", next, "number", number, "index", index);
   };
 

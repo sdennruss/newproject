@@ -370,6 +370,7 @@ h2 {
   height: inherit;
   display: flex;
   align-items: center;
+  animation: flash 1500ms linear infinite;
 }
 
 .p-description-container {
