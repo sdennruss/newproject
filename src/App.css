@@ -1,6 +1,14 @@
 @font-face {
-  font-family: "Ligconsolata-Regular";
-  src: url("Ligconsolata-Regular.ttf") format("truetype");
+  font-family: "MaisonNeue-Book";
+  src: url("MaisonNeue-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RecifeDisplay-Bold";
+  src: url("RecifeDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MaisonNeue-Light";
+  src: url("MaisonNeue-Light.ttf") format("truetype");
 }
 
 * {
@@ -41,14 +49,12 @@ span {
   text-decoration: none;
   color: var(--accent-color-1);
   font-size: 1.5rem;
-  font-family: "Ligconsolata-Regular";
-}
-
-p {
+  font-family: "MaisonNeue-Light";
 }
 
 h2 {
   font-size: 3.5rem;
+  font-family: "RecifeDisplay-Bold";
 }
 
 .header-container {
@@ -98,6 +104,11 @@ h2 {
 .listed-nav:hover {
   border: 1px solid var(--dominant-color);
   border-radius: 5rem;
+}
+
+.nav {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 /* homepage */
@@ -158,6 +169,7 @@ h2 {
   color: var(--background-color);
   transition: all 800ms ease;
   overflow: hidden;
+  font-family: "Inter-Regular";
 }
 
 @keyframes transitionIn {
@@ -204,17 +216,16 @@ h2 {
   margin-top: 1rem;
 }
 
-.about-para.blog {
+.about-para-blog {
   color: var(--dominant-color);
-  font-weight: 700;
+  font-weight: 900;
 }
 
-.about-para.blog:hover {
+.about-para-blog:hover {
   text-decoration: underline;
 }
 
 .dev {
-  font-family: "Anonymous Pro", monospace;
   overflow: hidden;
   border-right: 2px solid rgba(0, 0, 0, 0.75);
   white-space: nowrap;
@@ -222,6 +233,10 @@ h2 {
   animation: typewriter 6s steps(15) infinite normal both,
     blinkTextCursor 500ms steps(15) infinite normal;
   display: inline-flex;
+}
+
+.des {
+  font-style: italic;
 }
 
 @keyframes typewriter {
@@ -254,7 +269,7 @@ h2 {
 }
 
 .three {
-  font-size: 22rem;
+  font-size: 20rem;
   -webkit-text-stroke: 1px var(--dominant-color);
   -webkit-text-fill-color: transparent;
 }
@@ -456,14 +471,6 @@ h2 {
   margin-top: 2rem;
 }
 
-.fa.fa-copyright {
-  font-size: 1.5rem;
-}
-
-.copy-right {
-  display: flex;
-}
-
 .definition {
   margin-top: 1rem;
   font-size: 1.3rem;
@@ -478,6 +485,33 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin: 0rem 2rem;
+}
+.copy-right {
+  font-weight: 900;
+  display: flex;
+}
+
+.my-github {
+  margin-right: 1rem;
+}
+
+.email-me,
+.my-github {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.my-github:hover,
+.email-me:hover {
+  color: var(--dominant-color);
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.fa.fa-copyright {
+  font-size: 1.5rem;
 }
 
 /* Contact Details */
@@ -499,13 +533,14 @@ h2 {
   width: 90%;
   text-align: center;
   color: var(--background-color);
+  font-weight: 900;
 }
 
 .blob {
   position: absolute;
   top: 0;
   left: 0;
-  fill: var(--secondary-color);
+  fill: var(--dominant-color);
   width: 50vmax;
   z-index: -1;
   animation: move 10s ease-in-out infinite;
@@ -622,10 +657,32 @@ h2 {
     height: 700px;
   }
 
-  .about-para,
   .about-para.long {
     width: unset;
+  }
+  .about-para {
+    width: unset;
     margin: 0rem 2rem 2rem 2rem;
+  }
+
+  .dev {
+    overflow: hidden;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    white-space: nowrap;
+    width: 40%;
+    animation: typewriter 6s steps(15) infinite normal both,
+      blinkTextCursor 500ms steps(15) infinite normal;
+    display: inline-flex;
+  }
+
+  @keyframes typewriter {
+    10% {
+      width: 0ch;
+    }
+
+    0% {
+      width: 15ch;
+    }
   }
 
   .p-image-container {
@@ -688,6 +745,21 @@ h2 {
     transform-origin: 60% 60%;
   }
 
+  .my-github,
+  .email-me {
+    letter-spacing: unset;
+    text-transform: unset;
+  }
+
+  .contact-button-container,
+  .p-button-container {
+    margin: 2rem 0;
+  }
+
+  .p-details-container {
+    height: unset;
+  }
+
   @keyframes roll {
     0% {
       transform: scale(1) translate(-55px, -260px);
@@ -707,5 +779,11 @@ h2 {
     100% {
       transform: scale(1) translate(-55px, -260px);
     }
+  }
+
+  .full-name,
+  .email-me,
+  .my-github {
+    font-size: 1rem;
   }
 }

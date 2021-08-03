@@ -4,7 +4,7 @@ import { details } from "./details";
 import { Link } from "react-router-dom";
 
 const Description = ({ index }) => {
-  const [next, setNext] = useState(0);
+  const [next, setNext] = useState(1);
 
   const routeError = index < 0 ? 0 : index;
 

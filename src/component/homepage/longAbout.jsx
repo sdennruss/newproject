@@ -11,7 +11,7 @@ const LongAbout = () => {
         blog can be found{" "}
         <a
           href="https://uiwebdevcodinglog.tumblr.com/"
-          className="about-para blog"
+          className="about-para-blog"
           target="_blank"
           rel="noopener noreferrer"
         >

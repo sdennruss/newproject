@@ -16,13 +16,13 @@ const Contact = () => {
           </div>
           <div className="contact-summary-container">
             <p className="contact-summary">
-              Have a look at my contact paget to see if you feel our values
-              aligns. Idk some verbiage here I ahven’t decided yet
+              Visit my contact page to see if you feel my values and your
+              goals/missions align.
             </p>
           </div>
           <div className="contact-button-container">
             <Link to="/contact" className="contact-button">
-              More Deets
+              More Details
             </Link>
           </div>
         </div>

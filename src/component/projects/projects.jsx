@@ -35,7 +35,7 @@ const Projects = () => {
 
                 <p className="p-button-container">
                   <Link className="p-button" to={`/projects/${project.path}`}>
-                    Check it out
+                    More Details
                   </Link>
                 </p>
               </div>
