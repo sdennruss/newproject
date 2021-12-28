@@ -4,13 +4,14 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 const ProjectBanner = () => {
 	const projectNames = [
 		"Vegan Virgin Challenge",
+		"Majik Kids",
 		"Omnipresent Replica",
 		"GLH Renovations",
 		"Model Behaviour",
 		"Parachute",
 	];
 	return (
-		<div className="banner-container">
+		<div id="projects" className="banner-container">
 			<p className="project-banner">
 				Pro
 				<br />

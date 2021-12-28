@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Contact = () => {
 	return (
 		<React.Fragment>
-			<div id="contact" className="banner-container">
+			<div className="banner-container">
 				<p className="project-banner">
 					Con
 					<br />
 					tact.
 				</p>
-				<div className="contact-names-container">
+				<div id="contact" className="contact-names-container">
 					<div className="w-t-container">
 						<h2 className="work-together">Interested in working together?</h2>
 					</div>

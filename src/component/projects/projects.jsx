@@ -6,7 +6,7 @@ import ProjectBanner from "./projectBanner";
 const Projects = () => {
 	return (
 		<React.Fragment>
-			<div id="projects" className="outer-projects-container">
+			<div className="outer-projects-container">
 				<ProjectBanner />
 				<div className="outer-p-container">
 					{details.map((project) => (
@@ -34,11 +34,11 @@ const Projects = () => {
 									<p className="p-summary">{project.summary}</p>
 								</div>
 
-								<p className="p-button-container">
-									<Link className="p-button" to={`/projects/${project.path}`}>
-										More Details
-									</Link>
-								</p>
+								<div className="p-button-container">
+									<a className="p-button" href={`/projects/${project.path}`}>
+										Tech Details
+									</a>
+								</div>
 							</div>
 						</div>
 					))}

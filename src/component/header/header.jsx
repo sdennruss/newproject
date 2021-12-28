@@ -5,7 +5,6 @@ import NavBar from "./navbar";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const Header = () => {
-	const navigation = ["home", "projects", "contact"];
 	return (
 		<React.Fragment>
 			<div className="header-container">

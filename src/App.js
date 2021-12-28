@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./component/header/header";
-import Projects from "./component/projects/projects";
 import Homepage from "./component/homepage/homepage";
 import ProjectDetails from "./component/projects/projectDetails";
 import ContactDetails from "./component/contact/contactDetails";
