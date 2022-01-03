@@ -6,7 +6,7 @@ const Footer = () => {
 			<div className="footer-container">
 				<div className="copy-right">
 					<i className="fa fa-copyright"> </i>
-					<p className="full-name"> 2021 Shanice Dennis-Russell</p>
+					<p className="full-name"> 2022 Shanice Dennis-Russell</p>
 				</div>
 				<div>
 					<a

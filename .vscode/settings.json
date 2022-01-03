@@ -1,0 +1,11 @@
+{
+  "terminal.integrated.commandsToSkipShell": [
+    " \"emmet.includeLanguages\": {   \"javascript\": \"javascriptreact\" }",
+    "\"emmet.triggerExpansionOnTab\": true"
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true
+}

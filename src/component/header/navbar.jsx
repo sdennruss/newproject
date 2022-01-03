@@ -2,7 +2,7 @@ import React from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const NavBar = () => {
-	const navigation = ["home", "projects", "contact"];
+	const navigation = ["home", "projects"];
 
 	return (
 		<React.Fragment>
@@ -20,6 +20,9 @@ const NavBar = () => {
 							</NavLink>
 						</li>
 					))}
+					<NavLink to="/Contact" smooth className="nav">
+						Contact
+					</NavLink>
 				</ul>
 			</div>
 			<div className="circular-hover"></div>

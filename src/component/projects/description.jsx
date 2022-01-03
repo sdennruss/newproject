@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { details } from "./details";
 import { Link } from "react-router-dom";
 
@@ -16,9 +16,15 @@ const Description = ({ index }) => {
 		console.log(index);
 	};
 
+	const scrollRef = useRef();
+
+	function handleScroll() {
+		scrollRef.current.scrollIntoView({ behavior: "smooth" });
+	}
+
 	return (
 		<React.Fragment>
-			<div className="top-image-container">
+			<div ref={scrollRef} className="top-image-container">
 				<div className="half-container">
 					<div className="main-title-container">
 						<h1 className="main-title">{details[routeIndex].title}</h1>
@@ -29,7 +35,11 @@ const Description = ({ index }) => {
 					</div>
 
 					<div className="individual-img-container">
-						<img className="individual-img" src={details[routeIndex].mainImg} />
+						<img
+							alt=""
+							className="individual-img"
+							src={details[routeIndex].mainImg}
+						/>
 					</div>
 				</div>
 			</div>
@@ -65,27 +75,28 @@ const Description = ({ index }) => {
 
 			<div className="bottom-image-container">
 				<div className="mobile-image">
-					<img className="m-image" src={details[routeIndex].mobile1} />
+					<img alt="" className="m-image" src={details[routeIndex].mobile1} />
 				</div>
 				<div className="mobile-image">
-					<img className="m-image" src={details[routeIndex].mobile2} />
+					<img alt="" className="m-image" src={details[routeIndex].mobile2} />
 				</div>
 				<div className="mobile-image">
-					<img className="m-image" src={details[routeIndex].mobile3} />
+					<img alt="" className="m-image" src={details[routeIndex].mobile3} />
 				</div>
 			</div>
-			<div className="arrow container">
+			<div onClick={handleScroll} className="arrow container">
 				<Link
-					onKeyDown={() => handleNextProject(next + 1)}
 					to={`/projects/${newPath}`}
+					onKeyDown={() => handleNextProject(next + 1)}
 					className="arrow-link"
 				>
 					<i
 						onClick={() => handleNextProject(next + 1)}
 						className="fa fa-angle-double-right"
-					></i>
+					>
+						Next Project{" "}
+					</i>
 				</Link>
-				<p className="next">next project</p>
 			</div>
 		</React.Fragment>
 	);

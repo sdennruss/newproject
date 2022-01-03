@@ -120,6 +120,7 @@ h2 {
 	flex: 1;
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 
 .nav {
@@ -264,7 +265,6 @@ a.nav:target {
 }
 .p-names {
 	margin-left: 3rem;
-	text-transform: uppercase;
 	cursor: pointer;
 }
 
@@ -422,7 +422,7 @@ a.nav:target {
 }
 
 .subtitle {
-	line-height: 2.25rem;
+	line-height: 1.4;
 }
 
 .more-info-container {
@@ -442,10 +442,12 @@ a.nav:target {
 
 .visit-web {
 	cursor: pointer;
+	color: white;
 }
 
 .fa.fa-angle-double-right {
 	font-size: 3.5rem;
+	margin-bottom: 1rem;
 }
 
 .arrow {
@@ -474,6 +476,7 @@ a.nav:target {
 
 .next {
 	font-weight: 700;
+	cursor: pointer;
 }
 
 .bottom-image-container {
